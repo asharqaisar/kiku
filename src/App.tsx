@@ -7,6 +7,7 @@ import SEO from './components/SEO'
 import Toaster from './components/kiku/ui/Toaster'
 import { usePlayer } from './stores/player'
 import { searchSongs, getSuggestions, getSongById } from './services/api'
+import { Analytics } from '@vercel/analytics/react'
 
 // Performance: Lazy load heavy components
 const Aurora = lazy(() => import('./components/reactbits/Aurora'))
@@ -314,6 +315,7 @@ export default function App() {
       </Suspense>
       <Toaster />
     </div>
+    <Analytics />
     </>
   )
 }
