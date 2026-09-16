@@ -294,7 +294,7 @@ export default function App() {
         </section>
 
         <footer className="w-full mt-10 sm:mt-12 mb-2 text-[10px] sm:text-[11px] text-center text-[#7A7F98]/40 font-sans select-none shrink-0 space-y-2">
-          <p>Made with ❤️ by Ashar • React + React Bits • Apple Lyrics • Peak perf</p>
+          <p>Made with ❤️ by Ashar</p>
           <div className="flex items-center justify-center gap-3 text-[10px]">
             <button onClick={() => setView('home')} className="hover:text-[#A6ADC8] transition-colors underline-offset-2 hover:underline cursor-pointer">Home</button>
             <span className="opacity-30">•</span>
