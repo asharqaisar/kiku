@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="128" fill="#0E0E15"/>
+  <circle cx="256" cy="256" r="180" fill="#CBA6F7" opacity="0.12"/>
+  <circle cx="256" cy="256" r="120" fill="#CBA6F7" opacity="0.08"/>
+  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="600" font-size="200" fill="#EDEEF7">k</text>
+  <circle cx="328" cy="328" r="18" fill="#CBA6F7"/>
+</svg>

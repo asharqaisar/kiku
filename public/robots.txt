@@ -1,0 +1,23 @@
+# kiku. robots.txt - SEO optimized
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kiku.is-a.dev/sitemap.xml
+
+# Disallow API routes from indexing (if any)
+Disallow: /api/
+Disallow: /sw.js
+
+# Crawl delay (optional, be nice)
+Crawl-delay: 1
+
+# For ads bots
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

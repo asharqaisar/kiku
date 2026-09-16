@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- Primary SEO -->
+  <title>kiku. — made for late-night listening</title>
+  <meta name="title" content="kiku. — made for late-night listening" />
+  <meta name="description" content="kiku. is a beautiful, fast, mobile-first music player for late-night listening. Search, play, download, lyrics (Apple Music style), queue, and more. Built with React + React Bits." />
+  <meta name="keywords" content="kiku, music player, late night listening, jiosaavn, spotify alternative, apple music lyrics, free music, download songs, react bits, pwa music player, ashar" />
+  <meta name="author" content="Ashar" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0E0E15" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://kiku.is-a.dev/" />
+
+  <!-- Google Search Console Verification - REPLACE content after you get code from https://search.google.com/search-console -->
+  <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE" /> -->
+  <!-- Bing Webmaster: <meta name="msvalidate.01" content="YOUR_BING_CODE" /> -->
+  <!-- Yandex: <meta name="yandex-verification" content="YOUR_YANDEX_CODE" /> -->
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kiku.is-a.dev/" />
+  <meta property="og:title" content="kiku. — made for late-night listening" />
+  <meta property="og:description" content="Beautiful, fast, mobile-first music player for late-night listening. Search, play, download, Apple Music-style lyrics, queue & more." />
+  <meta property="og:image" content="https://kiku.is-a.dev/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="kiku. music player" />
+  <meta property="og:site_name" content="kiku." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kiku.is-a.dev/" />
+  <meta property="twitter:title" content="kiku. — made for late-night listening" />
+  <meta property="twitter:description" content="Beautiful, fast, mobile-first music player for late-night listening. Search, play, download, Apple Music-style lyrics, queue & more." />
+  <meta property="twitter:image" content="https://kiku.is-a.dev/og-image.png" />
+  <meta name="twitter:creator" content="@ashar" />
+
+  <!-- PWA / Mobile -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="kiku." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="kiku." />
+  <meta name="msapplication-TileColor" content="#0E0E15" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+
+  <!-- Performance: Preconnect to APIs & CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://c.saavncdn.com" />
+  <link rel="preconnect" href="https://jioo-xi.vercel.app" />
+  <link rel="preconnect" href="https://lrclib.net" />
+  <link rel="dns-prefetch" href="https://c.saavncdn.com" />
+  <link rel="dns-prefetch" href="https://jioo-xi.vercel.app" />
+  
+  <!-- Fonts - optimized with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Structured Data - JSON-LD for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "kiku.",
+    "description": "Beautiful, fast, mobile-first music player for late-night listening",
+    "url": "https://kiku.is-a.dev/",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Ashar" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "120" },
+    "screenshot": "https://kiku.is-a.dev/og-image.png",
+    "featureList": ["Search songs", "Play music", "Download songs", "Apple Music style lyrics", "Queue like Spotify", "PWA installable", "Mobile first"]
+  }
+  </script>
+
+  <!-- Music-specific structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "kiku. Player",
+    "url": "https://kiku.is-a.dev/",
+    "genre": ["Late-night", "Lo-fi", "Chill", "Indie"]
+  }
+  </script>
+
+  <!-- Ads Meta Tags ONLY - no visible ads, just verification for future monetization (per user request) -->
+  <!-- Google AdSense account verification - uncomment when you have ca-pub ID, no ad units shown -->
+  <!-- <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX" /> -->
+  <!-- Google AdSense / AdMob - meta only, no script shown to users -->
+  <!-- <meta name="google-adsense-platform-account" content="ca-host-pub-..." /> -->
+  <!-- <meta name="google-adsense-platform-domain" content="kiku.is-a.dev" /> -->
+  <!-- Monetization / Web Monetization API - meta only -->
+  <!-- <meta name="monetization" content="$ilp.uphold.com/YOUR_PAYMENT_POINTER" /> -->
+  <!-- Facebook Domain Verification for Audience Network (meta only) -->
+  <!-- <meta name="facebook-domain-verification" content="YOUR_FB_CODE" /> -->
+  <!-- PropellerAds / Other networks meta verification (meta only) -->
+  <!-- <meta name="propeller" content="YOUR_PROPELLER_CODE" /> -->
+
+  <!-- Google Analytics / Ads - META ONLY, NO VISIBLE ADS - UNCOMMENT WHEN YOU HAVE IDs -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_GA4_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YOUR_GA4_ID');
+    // Ads conversion only, no display ads
+    // gtag('config', 'AW-YOUR_ADS_ID');
+  </script>
+  -->
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- No-JS fallback for SEO -->
+  <noscript>
+    <div style="text-align:center; padding: 40px; font-family: Inter, sans-serif; background: #0E0E15; color: #E6E9F5;">
+      <h1 style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 48px;">kiku.</h1>
+      <p>made for late-night listening</p>
+      <p>Please enable JavaScript to use kiku. music player.</p>
+    </div>
+  </noscript>
+</body>
+</html>

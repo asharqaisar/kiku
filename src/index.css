@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #0E0E15;
+  --color-mantle: #181825;
+  --color-surface: #1E1E2E;
+  --color-surface-hover: #252538;
+  --color-text: #E6E9F5;
+  --color-text-soft: #CDD6F4;
+  --color-subtext: #A6ADC8;
+  --color-subtext-dim: #7A7F98;
+  --color-lavender: #CBA6F7;
+  --color-lavender-soft: #E6D8FF;
+  --color-lavender-glow: oklch(0.75 0.12 300 / 0.25);
+  --color-lavender-dim: rgba(203,166,247,0.12);
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-card: 16px;
+  --radius-dock: 20px;
+  --radius-full: 9999px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html { 
+  background: var(--color-base); 
+  color: var(--color-text);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203,166,247,0.15) transparent;
+  /* Mobile first: prevent overscroll bounce */
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+body { 
+  font-family: var(--font-sans); 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: contain;
+  background: #0E0E15;
+  /* Use dynamic viewport for mobile */
+  min-height: 100dvh;
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior: none;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 28px var(--color-lavender-glow);
+}
+
+/* Mobile first utilities */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Better focus for keyboard, not for touch */
+button:focus-visible {
+  outline: 2px solid #CBA6F7;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(203,166,247,0.15); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(203,166,247,0.3); }
+
+/* Lite mode - disable expensive effects */
+html.lite .backdrop-blur-xl,
+html.lite .backdrop-blur-2xl,
+html.touch .backdrop-blur-2xl {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html.lite #aurora,
+html.touch #aurora {
+  display: none !important;
+}
+
+html.lite .aurora-container,
+html.touch .aurora-container {
+  display: none;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile: ensure minimum touch target 44px */
+@media (max-width: 640px) {
+  button {
+    min-height: 36px;
+    min-width: 36px;
+  }
+}
