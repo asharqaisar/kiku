@@ -44,7 +44,8 @@ export default function SEO() {
       if (dataUrl) updateOgImageMeta(dataUrl)
     }, 600)
 
-    // JSON-LD for current track
+    // JSON-LD for current track - use current origin (vercel.app or is-a.dev)
+    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kiku.vercel.app'
     let jsonLd = document.getElementById('kiku-track-jsonld')
     if (!jsonLd) {
       jsonLd = document.createElement('script')
@@ -59,7 +60,7 @@ export default function SEO() {
       "byArtist": { "@type": "MusicGroup", "name": current.artist },
       "duration": `PT${current.durationSec}S`,
       "image": current.cover,
-      "url": `https://kiku.is-a.dev/?track=${current.id}`,
+      "url": `${origin}/?track=${current.id}`,
       "inAlbum": { "@type": "MusicAlbum", "name": current.title },
       "genre": current.tags
     })

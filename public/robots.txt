@@ -2,17 +2,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://kiku.is-a.dev/sitemap.xml
+# Sitemap - use vercel.app for now (change to is-a.dev when domain live)
+Sitemap: https://kiku.vercel.app/sitemap.xml
 
-# Disallow API routes from indexing (if any)
+# Disallow API routes from indexing
 Disallow: /api/
 Disallow: /sw.js
 
-# Crawl delay (optional, be nice)
 Crawl-delay: 1
 
-# For ads bots
 User-agent: AdsBot-Google
 Allow: /
 
